@@ -163,9 +163,9 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
  let updateSphere = (event) => {
     
-    sphere.scale.x += window.scrollY * .00005
-    sphere.scale.y += window.scrollY * .00005
-    sphere.scale.z += window.scrollY * .00005
+    sphere.scale.x += window.scrollY * .00001
+    sphere.scale.y += window.scrollY * .00001
+    sphere.scale.z += window.scrollY * .00001
  }
 
  window.addEventListener('scroll', updateSphere)
@@ -187,7 +187,7 @@ const tick = () =>
     sphere.rotation.z = .1 * elapsedTime
     
     sphere.rotation.x += .1 * (targetX - sphere.rotation.x)
-    sphere.rotation.y += 1 * (targetY - sphere.rotation.y)
+    sphere.position.y += .5 * (targetY - sphere.rotation.y)
 
 
     // Update Orbital Controls
